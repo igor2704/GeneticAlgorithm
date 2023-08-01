@@ -42,7 +42,7 @@ def iou(mask1: torch.Tensor, mask2: torch.Tensor) -> float:
     return float(intersection / union)
 
 
-def get_tgi(img_seq: tp.Sequence[np.ndarray], mask_seq: tp.Sequence[np.ndarray], cuda_name: bool = '',
+def get_tgi(img_seq: tp.Sequence[np.ndarray], mask_seq: tp.Sequence[np.ndarray], cuda_name: str = '',
             mut_force: float = 0.5, prob_mut: float = 0.75, internal_mut_bound: float = 1e-4,
             max_iter: int = 75, delta_converged: float = 5e-3, population_count: int = 30,
             initial_population: np.ndarray | None = None,
